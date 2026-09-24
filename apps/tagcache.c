@@ -86,6 +86,7 @@
 #include "debug.h"
 #include "dircache.h"
 #include "errno.h"
+#include "rbpaths.h"
 
 #ifndef __PCTOOL__
 #include "lang.h"
@@ -267,6 +268,7 @@ enum tagcache_queue {
     Q_START_SCAN,
     Q_IMPORT_CHANGELOG,
     Q_UPDATE,
+    Q_MARKER_UPDATE,
     Q_REBUILD,
 
     /* Internal tagcache command queue. */
@@ -5014,7 +5016,7 @@ void tagcache_screensync_enable(bool state)
 /* this is called by the database tool to not pull in global_settings */
 static
 #endif
-void do_tagcache_build(const char *path[])
+bool do_tagcache_build(const char *path[])
 {
     struct tagcache_header header;
     bool ret;
@@ -5035,14 +5037,14 @@ void do_tagcache_build(const char *path[])
     {
         logf("skipping, cache already waiting for commit");
         close(cachefd);
-        return ;
+        return false;
     }
 
     cachefd = open_db_fd(TAGCACHE_FILE_TEMP, O_RDWR | O_CREAT | O_TRUNC);
     if (cachefd < 0)
     {
         logf("master file open failed: %s", TAGCACHE_FILE_TEMP);
-        return ;
+        return false;
     }
 
     filenametag_fd = open_tag_fd(&header, tag_filename, false);
@@ -5151,14 +5153,15 @@ void do_tagcache_build(const char *path[])
     {
         logf("Aborted.");
         cpu_boost(false);
-        return ;
+        return false;
     }
 
     /* Commit changes to the database. */
 #ifdef __PCTOOL__
     allocate_tempbuf();
 #endif
-    if (commit())
+    bool success = commit();
+    if (success)
     {
         logf("tagcache built!");
     }
@@ -5176,10 +5179,11 @@ void do_tagcache_build(const char *path[])
 #endif
 
     cpu_boost(false);
+    return success;
 }
 
 #ifndef __PCTOOL__
-void tagcache_build(void)
+bool tagcache_build(void)
 {
     char *vect[MAX_STATIC_ROOTS + 1]; /* +1 to ensure NULL sentinel */
     char str[sizeof(global_settings.tagcache_scan_paths)];
@@ -5188,7 +5192,7 @@ void tagcache_build(void)
     int res = split_string(str, ':', vect, MAX_STATIC_ROOTS);
     vect[res] = NULL;
 
-    do_tagcache_build((const char**)vect);
+    return do_tagcache_build((const char**)vect);
 }
 #endif /* __PCTOOL__ */
 
@@ -5237,6 +5241,18 @@ static bool NO_INLINE db_file_exists(const char* filename)
     snprintf(buf, sizeof(buf), "%s/%s", tc_stat.db_path, filename);
 
     return file_exists(buf);
+}
+
+static bool marker_update_queued;
+
+static void queue_marker_update(void)
+{
+    if (marker_update_queued || !file_exists(TAGCACHE_UPDATE_FILE))
+        return;
+
+    logf("tagcache update marker found");
+    marker_update_queued = true;
+    queue_post(&tagcache_queue, Q_MARKER_UPDATE, 0);
 }
 
 static void tagcache_thread(void)
@@ -5289,6 +5305,8 @@ static void tagcache_thread(void)
         tagcache_commit_finalize();
     }
 
+    queue_marker_update();
+
     while (1)
     {
         run_command_queue(false);
@@ -5308,12 +5326,34 @@ static void tagcache_thread(void)
                 break;
 
             case Q_UPDATE:
-                tagcache_build();
+            case Q_MARKER_UPDATE:
+            {
+                if (ev.id == Q_MARKER_UPDATE &&
+                    !file_exists(TAGCACHE_UPDATE_FILE))
+                {
+                    marker_update_queued = false;
+                    break;
+                }
+
+                bool marker = file_exists(TAGCACHE_UPDATE_FILE);
+                bool success = tagcache_build();
 #ifdef HAVE_TC_RAMCACHE
                 load_ramcache();
 #endif
                 check_deleted_files();
+                if (marker && success && !tc_stat.commit_delayed)
+                {
+                    if (remove(TAGCACHE_UPDATE_FILE) < 0)
+                        logf("tagcache update marker removal failed");
+                    /* Avoid repeating the update through autoupdate. */
+                    check_done = true;
+                }
+                else if (marker)
+                    logf("tagcache update marker update failed");
+                if (ev.id == Q_MARKER_UPDATE)
+                    marker_update_queued = false;
                 break ;
+            }
 
             case Q_START_SCAN:
                 check_done = false;
@@ -5434,7 +5474,10 @@ struct tagcache_stat* tagcache_get_stat(void)
 
 void tagcache_start_scan(void)
 {
-    queue_post(&tagcache_queue, Q_START_SCAN, 0);
+    if (file_exists(TAGCACHE_UPDATE_FILE))
+        queue_marker_update();
+    else
+        queue_post(&tagcache_queue, Q_START_SCAN, 0);
 }
 
 bool tagcache_update(void)

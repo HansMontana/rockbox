@@ -123,6 +123,7 @@
 #define RESUMEFILE          ROCKBOX_DIR "/.resume.cfg"
 #define CONFIGFILE          ROCKBOX_DIR "/config.cfg"
 #define FIXEDSETTINGSFILE   ROCKBOX_DIR "/fixed.cfg"
+#define TAGCACHE_UPDATE_FILE ROCKBOX_DIR "/tagcache_update.pending"
 
 #define PLAYLIST_CONTROL_FILE   ROCKBOX_DIR "/.playlist_control"
 #define GLYPH_CACHE_FILE        ROCKBOX_DIR "/.glyphcache"

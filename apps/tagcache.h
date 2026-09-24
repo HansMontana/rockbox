@@ -160,7 +160,7 @@ struct tagcache_search {
 void tagcache_reverse_scan(void);
 /* call this directly instead of tagcache_build in order to not pull
  * on global_settings */
-void do_tagcache_build(const char *path[]);
+bool do_tagcache_build(const char *path[]);
 #endif
 
 const char* tagcache_tag_to_str(int tag);
