@@ -11,7 +11,7 @@
 
 # Prints the revision of the repository.
 #
-# The format is rNNNNNNNNNN[M]-YYMMDD
+# The format is <commit>[M]-hans-YYMMDD for this fork.
 #
 # The M indicates the revision has been locally modified
 #
@@ -51,10 +51,9 @@ if [ -z $VERSION ]; then
 	    VER=`gitversion $TOP`
     fi
 if [ -z $SOURCE_DATE_EPOCH ]; then
-	VERSION=$VER-`date -u +%y%m%d`
+	VERSION=$VER-hans-`date -u +%y%m%d`
 else
-	VERSION=$VER-`date -d @$SOURCE_DATE_EPOCH -u +%y%m%d`
+	VERSION=$VER-hans-`date -d @$SOURCE_DATE_EPOCH -u +%y%m%d`
 fi
 fi
 echo $VERSION
-

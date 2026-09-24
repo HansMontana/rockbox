@@ -3,6 +3,11 @@ Personal Fork Notice
 This is a personal Rockbox fork maintained for use on my personal iPod Mini
 2G. It is not an official Rockbox distribution.
 
+Fork-built firmware uses the version format `<commit>-hans-<date>`. The
+`-hans-` marker identifies firmware built from this fork. It does not
+represent ownership of Rockbox itself; it exists solely to make it quick to
+see during boot that this fork is running on the device.
+
 The fork currently adds adjustable iPod Mini 2G backlight brightness from 1
 to 100 using software PWM.
 
