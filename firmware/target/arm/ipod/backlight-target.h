@@ -59,6 +59,9 @@ void backlight_hw_brightness(int val);
 bool backlight_hw_init(void);
 void backlight_hw_on(void);
 void backlight_hw_off(void);
+#ifdef HAVE_BACKLIGHT_BRIGHTNESS
+void backlight_hw_brightness(int val);
+#endif
 
 #ifndef BOOTLOADER
 #define _backlight_on_isr() backlight_hw_on()

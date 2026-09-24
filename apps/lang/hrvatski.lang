@@ -2530,15 +2530,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Brightness"
+    backlight_brightness: "Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Svjetlina"
+    backlight_brightness: "Svjetlina pozadinskog osvjetljenja"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Svjetlina"
+    backlight_brightness: "Svjetlina pozadinskog osvjetljenja"
   </voice>
 </phrase>
 <phrase>

@@ -118,9 +118,16 @@
 
 /* Define this for LCD backlight available */
 #define HAVE_BACKLIGHT
+#define HAVE_BACKLIGHT_BRIGHTNESS
 
 /* We can fade the backlight by using PWM */
 #define CONFIG_BACKLIGHT_FADING BACKLIGHT_FADING_PWM
+#define BACKLIGHT_BRIGHTNESS_PWM
+
+/* Main LCD backlight brightness range and defaults */
+#define MIN_BRIGHTNESS_SETTING      1
+#define MAX_BRIGHTNESS_SETTING      100
+#define DEFAULT_BRIGHTNESS_SETTING  100
 
 /* define this if the unit uses a scrollwheel for navigation */
 #define HAVE_SCROLLWHEEL

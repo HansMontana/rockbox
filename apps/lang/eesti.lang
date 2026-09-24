@@ -2680,13 +2680,16 @@
   desc: in settings_menu
   user: core
   <source>
-    *: "Brightness"
+    *: none
+    backlight_brightness: "Backlight Brightness"
   </source>
   <dest>
-    *: "Heledus"
+    *: none
+    backlight_brightness: "Taustavalguse heledus"
   </dest>
   <voice>
-    *: "Heledus"
+    *: none
+    backlight_brightness: "Taustavalguse heledus"
   </voice>
 </phrase>
 <phrase>

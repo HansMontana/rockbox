@@ -2652,15 +2652,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Brightness"
+    backlight_brightness: "Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Brilho"
+    backlight_brightness: "Brilho da retroiluminação"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Brilho"
+    backlight_brightness: "Brilho da retroiluminação"
   </voice>
 </phrase>
 <phrase>

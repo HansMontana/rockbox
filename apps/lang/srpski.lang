@@ -2396,15 +2396,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Brightness"
+    backlight_brightness: "Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Осветљај"
+    backlight_brightness: "Јачина позадинског светла"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Осветљај"
+    backlight_brightness: "Јачина позадинског светла"
   </voice>
 </phrase>
 <phrase>

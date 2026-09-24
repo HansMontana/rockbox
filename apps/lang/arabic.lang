@@ -2960,6 +2960,23 @@
   </voice>
 </phrase>
 <phrase>
+  id: LANG_BRIGHTNESS
+  desc: in settings_menu
+  user: core
+  <source>
+    *: none
+    backlight_brightness: "Backlight Brightness"
+  </source>
+  <dest>
+    *: none
+    backlight_brightness: "سطوع الإضاءة الخلفية"
+  </dest>
+  <voice>
+    *: none
+    backlight_brightness: "سطوع الإضاءة الخلفية"
+  </voice>
+</phrase>
+<phrase>
   id: LANG_CONTRAST
   desc: in settings_menu
   user: core

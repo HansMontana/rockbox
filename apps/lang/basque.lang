@@ -2532,15 +2532,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Brightness"
+    backlight_brightness: "Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Distira"
+    backlight_brightness: "Atzeko argiaren distira"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Distira"
+    backlight_brightness: "Atzeko argiaren distira"
   </voice>
 </phrase>
 <phrase>

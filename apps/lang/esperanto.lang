@@ -2803,15 +2803,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Brightness"
+    backlight_brightness: "Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Heleco"
+    backlight_brightness: "Heleco de malantaŭa lumo"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Heleco"
+    backlight_brightness: "Heleco de malantaŭa lumo"
   </voice>
 </phrase>
 <phrase>

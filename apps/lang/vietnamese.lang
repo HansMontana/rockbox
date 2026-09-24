@@ -2383,15 +2383,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Brightness"
+    backlight_brightness: "Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Độ sáng"
+    backlight_brightness: "Độ sáng đèn nền"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Độ sáng"
+    backlight_brightness: "Độ sáng đèn nền"
   </voice>
 </phrase>
 <phrase>

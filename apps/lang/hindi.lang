@@ -4702,3 +4702,20 @@
     *: "आवाज के सेटिनगस बचा"
   </voice>
 </phrase>
+<phrase>
+  id: LANG_BRIGHTNESS
+  desc: in settings_menu
+  user: core
+  <source>
+    *: none
+    backlight_brightness: "Backlight Brightness"
+  </source>
+  <dest>
+    *: none
+    backlight_brightness: "बैकलाइट की चमक"
+  </dest>
+  <voice>
+    *: none
+    backlight_brightness: "बैकलाइट की चमक"
+  </voice>
+</phrase>
