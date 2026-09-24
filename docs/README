@@ -1,3 +1,19 @@
+Personal Fork Notice
+--------------------
+This is a personal Rockbox fork maintained for use on my personal iPod Mini
+2G. It is not an official Rockbox distribution.
+
+The fork currently adds adjustable iPod Mini 2G backlight brightness from 1
+to 100 using software PWM.
+
+It also supports a tagcache update marker: creating
+`/.rockbox/tagcache_update.pending` requests one database update after
+Rockbox starts, even when automatic updates are disabled. The marker is
+removed only after a successful update.
+
+Development of this fork uses agentic AI tooling: OpenAI ChatGPT using
+GPT-5.6 Luna.
+
                __________               __   ___.
      Open      \______   \ ____   ____ |  | _\_ |__   _______  ___
      Source     |       _//  _ \_/ ___\|  |/ /| __ \ /  _ \  \/  /
@@ -7,9 +23,9 @@
 
 Build Your Own Rockbox
 
-1. Clone 'rockbox' from git (or extract a downloaded archive).
+1. Clone this fork from git (or extract a downloaded archive).
 
-   $ git clone git://git.rockbox.org/rockbox
+   $ git clone https://github.com/HansMontana/rockbox.git
 
      or
 
@@ -40,6 +56,8 @@ Build Your Own Rockbox
    $ ../tools/configure
 
 5. *ploink*. Now you have got a Makefile generated for you.
+
+   For the personal iPod Mini 2G target, select 'ipodmini2g' when prompted.
 
 6. Run 'make' and soon the necessary pieces from the firmware and the apps
    directories have been compiled, linked and scrambled for you.
