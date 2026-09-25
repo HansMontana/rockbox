@@ -750,6 +750,12 @@ struct user_settings
 #endif
 #ifdef HAVE_BACKLIGHT_BRIGHTNESS
     int brightness;
+#if CONFIG_RTC
+    bool backlight_auto_brightness;
+    int night_brightness;
+    int night_mode_start;
+    int night_mode_end;
+#endif
 #endif
 #ifdef HAVE_COMPOSITE_VIDEO_OUT
     int composite_video_output;

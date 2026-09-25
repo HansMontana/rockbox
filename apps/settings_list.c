@@ -1527,6 +1527,21 @@ const struct settings_list settings[] = {
                 DEFAULT_BRIGHTNESS_SETTING, "brightness",UNIT_INT,
                 MIN_BRIGHTNESS_SETTING, MAX_BRIGHTNESS_SETTING, 1,
                 NULL, NULL, backlight_set_brightness),
+#if CONFIG_RTC
+    OFFON_SETTING(0, backlight_auto_brightness,
+                  LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS, false,
+                  "automatic backlight brightness", NULL),
+    INT_SETTING(F_NO_WRAP, night_brightness, LANG_NIGHT_BRIGHTNESS,
+                32, "night backlight brightness", UNIT_INT,
+                MIN_BRIGHTNESS_SETTING, MAX_BRIGHTNESS_SETTING, 1,
+                NULL, NULL, NULL),
+    INT_SETTING(F_TIME_SETTING | F_NO_WRAP, night_mode_start,
+                LANG_NIGHT_MODE_START, 22 * 60, "night mode start",
+                UNIT_MIN, 0, 23 * 60 + 59, 1, NULL, NULL, NULL),
+    INT_SETTING(F_TIME_SETTING | F_NO_WRAP, night_mode_end,
+                LANG_NIGHT_MODE_END, 7 * 60, "night mode end",
+                UNIT_MIN, 0, 23 * 60 + 59, 1, NULL, NULL, NULL),
+#endif
 #endif
     /* backlight fading */
 #if defined(HAVE_BACKLIGHT_FADING_INT_SETTING)

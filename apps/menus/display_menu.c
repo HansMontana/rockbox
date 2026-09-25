@@ -179,6 +179,13 @@ MENUITEM_SETTING(lcd_sleep_after_backlight_off,
 #endif
 #ifdef HAVE_BACKLIGHT_BRIGHTNESS
 MENUITEM_SETTING(brightness_item, &global_settings.brightness, NULL);
+#if CONFIG_RTC
+MENUITEM_SETTING(backlight_auto_brightness,
+                 &global_settings.backlight_auto_brightness, NULL);
+MENUITEM_SETTING(night_brightness, &global_settings.night_brightness, NULL);
+MENUITEM_SETTING(night_mode_start, &global_settings.night_mode_start, NULL);
+MENUITEM_SETTING(night_mode_end, &global_settings.night_mode_end, NULL);
+#endif
 #endif
 #ifdef HAVE_COMPOSITE_VIDEO_OUT
 MENUITEM_SETTING(composite_video_output,
@@ -216,6 +223,12 @@ MAKE_MENU(lcd_settings,ID2P(LANG_LCD_MENU),
 # endif
 # ifdef HAVE_BACKLIGHT_BRIGHTNESS
             ,&brightness_item
+#  if CONFIG_RTC
+            ,&backlight_auto_brightness
+            ,&night_brightness
+            ,&night_mode_start
+            ,&night_mode_end
+#  endif
 # endif
 #endif /* HAVE_BACKLIGHT */
 #ifdef HAVE_COMPOSITE_VIDEO_OUT

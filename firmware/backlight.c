@@ -32,6 +32,9 @@
 #include "i2c.h"
 #include "debug.h"
 #include "rtc.h"
+#if CONFIG_RTC
+#include "timefuncs.h"
+#endif
 #include "usb.h"
 #include "power.h"
 #include "system.h"
@@ -115,6 +118,49 @@ static unsigned int backlight_thread_id = 0;
 
 #ifdef HAVE_BACKLIGHT_BRIGHTNESS
 int backlight_brightness = DEFAULT_BRIGHTNESS_SETTING;
+
+#if !defined(BOOTLOADER)
+#if CONFIG_RTC
+static bool backlight_is_night(void)
+{
+    const struct tm *tm = get_time();
+    int now;
+    int start = global_settings.night_mode_start;
+    int end = global_settings.night_mode_end;
+
+    if (!valid_time(tm))
+        return false;
+
+    now = tm->tm_hour * 60 + tm->tm_min;
+    if (start == end)
+        return true;
+    if (start < end)
+        return now >= start && now < end;
+    return now >= start || now < end;
+}
+#endif
+
+static int backlight_effective_brightness(void)
+{
+#if CONFIG_RTC
+    if (global_settings.backlight_auto_brightness && backlight_is_night())
+        return global_settings.night_brightness;
+    return global_settings.brightness;
+#else
+    return global_settings.brightness;
+#endif
+}
+
+#if CONFIG_RTC
+static void backlight_update_brightness(void)
+{
+    int brightness = backlight_effective_brightness();
+
+    if (brightness != backlight_brightness)
+        backlight_set_brightness(brightness);
+}
+#endif
+#endif
 #endif
 static int backlight_timer SHAREDBSS_ATTR;
 static int backlight_timeout_normal = 5*HZ;
@@ -784,6 +830,9 @@ void backlight_thread(void)
                 if (bl_dim_timer_failed)
                     backlight_dim(bl_dim_target);
 #endif
+#if CONFIG_RTC && !defined(BOOTLOADER) && defined(HAVE_BACKLIGHT_BRIGHTNESS)
+                backlight_update_brightness();
+#endif
                 backlight_handle_timeout();
                 break;
         }
@@ -1104,6 +1153,10 @@ bool is_remote_backlight_on(bool ignore_always_off)
 #ifdef HAVE_BACKLIGHT_BRIGHTNESS
 void backlight_set_brightness(int val)
 {
+#if CONFIG_RTC && !defined(BOOTLOADER)
+    if (global_settings.backlight_auto_brightness)
+        val = backlight_effective_brightness();
+#endif
     if (val < MIN_BRIGHTNESS_SETTING)
         val = MIN_BRIGHTNESS_SETTING;
     else if (val > MAX_BRIGHTNESS_SETTING)

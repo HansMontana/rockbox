@@ -95,8 +95,22 @@
       }
 
       \opt{backlight_brightness}{
-        \item[Brightness.]
-        Changes the brightness of your LCD display.
+        \item[Day Backlight Brightness.]
+        Changes the brightness of your LCD display during the day.
+        \opt{rtc}{
+          \item[Automatic Day/Night Brightness.]
+          Automatically switches between the day and night brightness values
+          according to the configured schedule.
+
+          \item[Night Backlight Brightness.]
+          Sets the brightness used during night mode.
+
+          \item[Night Mode Starts.]
+          Sets the time when night mode begins.
+
+          \item[Night Mode Ends.]
+          Sets the time when night mode ends.
+        }
       }
       \opt{compositevideoout}{
         \item[Composite Video Output.]
