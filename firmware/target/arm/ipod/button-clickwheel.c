@@ -138,8 +138,10 @@ static inline int ipod_4g_button_read(void)
                 new_wheel_value = (status >> 16) & 0x7f;
                 whl = new_wheel_value;
                 
-                /* switch on backlight (again), reset power-off timer */
-                backlight_on();
+                /* Wake once when the wheel is touched. Subsequent touch
+                 * reports are not activity and must not hold the backlight on. */
+                if (!wheel_is_touched)
+                    backlight_on();
                 reset_poweroff_timer();
                 
                 /* Check whether the scrollwheel was untouched by accident or by will. */
