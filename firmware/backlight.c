@@ -468,7 +468,10 @@ static void backlight_dim(int value)
     else
     {
         bl_dim_timer_failed = value > 0 && value < BL_PWM_COUNT;
-        backlight_switch();
+        /* A partial brightness target requires PWM. Keep the current
+         * hardware state intact and retry when the backlight thread ticks. */
+        if (!bl_dim_timer_failed)
+            backlight_switch();
     }
 }
 
