@@ -2550,15 +2550,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Loumire di l'erî-clårté"
+    backlight_brightness: "Loumire di l'erî-clårté do djoû"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Loumire di l'erî-clårté"
+    backlight_brightness: "Loumire di l'erî-clårté do djoû"
   </voice>
 </phrase>
 <phrase>
@@ -11752,5 +11752,61 @@
   </dest>
   <voice>
     *: "Grandeu do fitchî"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Loumire otomatike djoû/nute"
+  </dest>
+  <voice>
+    *: "Loumire otomatike djoû/nute"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Loumire di l'erî-clårté del nute"
+  </dest>
+  <voice>
+    *: "Loumire di l'erî-clårté del nute"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Comince do môde nute"
+  </dest>
+  <voice>
+    *: "Comince do môde nute"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Fén do môde nute"
+  </dest>
+  <voice>
+    *: "Fén do môde nute"
   </voice>
 </phrase>

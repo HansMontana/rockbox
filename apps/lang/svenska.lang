@@ -2348,15 +2348,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Bakgrundsbelysningens ljusstyrka"
+    backlight_brightness: "Bakgrundsbelysningens ljusstyrka dagtid"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Bakgrundsbelysningens ljusstyrka"
+    backlight_brightness: "Bakgrundsbelysningens ljusstyrka dagtid"
   </voice>
 </phrase>
 <phrase>
@@ -17104,5 +17104,61 @@
   </dest>
   <voice>
     *: "Slutförd"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Automatisk ljusstyrka dag/natt"
+  </dest>
+  <voice>
+    *: "Automatisk ljusstyrka dag/natt"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Bakgrundsbelysningens ljusstyrka nattetid"
+  </dest>
+  <voice>
+    *: "Bakgrundsbelysningens ljusstyrka nattetid"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Nattläge börjar"
+  </dest>
+  <voice>
+    *: "Nattläge börjar"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Nattläge slutar"
+  </dest>
+  <voice>
+    *: "Nattläge slutar"
   </voice>
 </phrase>

@@ -2652,15 +2652,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Brilho da retroiluminação"
+    backlight_brightness: "Brilho diurno da retroiluminação"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Brilho da retroiluminação"
+    backlight_brightness: "Brilho diurno da retroiluminação"
   </voice>
 </phrase>
 <phrase>
@@ -12942,5 +12942,61 @@
   </dest>
   <voice>
     *: "Ponte de Debug Android"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Brilho automático de dia/noite"
+  </dest>
+  <voice>
+    *: "Brilho automático de dia/noite"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Brilho noturno da retroiluminação"
+  </dest>
+  <voice>
+    *: "Brilho noturno da retroiluminação"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Início do modo noturno"
+  </dest>
+  <voice>
+    *: "Início do modo noturno"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Fim do modo noturno"
+  </dest>
+  <voice>
+    *: "Fim do modo noturno"
   </voice>
 </phrase>

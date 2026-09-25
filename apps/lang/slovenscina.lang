@@ -5381,15 +5381,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Svetlost osvetlitve ozadja"
+    backlight_brightness: "Dnevna svetlost osvetlitve ozadja"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Svetlost osvetlitve ozadja"
+    backlight_brightness: "Dnevna svetlost osvetlitve ozadja"
   </voice>
 </phrase>
 <phrase>
@@ -12556,5 +12556,61 @@
   <voice>
     *: none
     masf: ""
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Samodejna dnevna/nočna svetlost"
+  </dest>
+  <voice>
+    *: "Samodejna dnevna/nočna svetlost"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Nočna svetlost osvetlitve ozadja"
+  </dest>
+  <voice>
+    *: "Nočna svetlost osvetlitve ozadja"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Začetek nočnega načina"
+  </dest>
+  <voice>
+    *: "Začetek nočnega načina"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Konec nočnega načina"
+  </dest>
+  <voice>
+    *: "Konec nočnega načina"
   </voice>
 </phrase>

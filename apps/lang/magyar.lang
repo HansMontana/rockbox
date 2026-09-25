@@ -2312,15 +2312,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Háttérvilágítás fényereje"
+    backlight_brightness: "Nappali háttérvilágítás fényereje"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Háttérvilágítás fényereje"
+    backlight_brightness: "Nappali háttérvilágítás fényereje"
   </voice>
 </phrase>
 <phrase>
@@ -17127,5 +17127,61 @@
   </dest>
   <voice>
     *: "Szűrő típusa"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Automatikus nappali/éjszakai fényerő"
+  </dest>
+  <voice>
+    *: "Automatikus nappali/éjszakai fényerő"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Éjszakai háttérvilágítás fényereje"
+  </dest>
+  <voice>
+    *: "Éjszakai háttérvilágítás fényereje"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Éjszakai mód kezdete"
+  </dest>
+  <voice>
+    *: "Éjszakai mód kezdete"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Éjszakai mód vége"
+  </dest>
+  <voice>
+    *: "Éjszakai mód vége"
   </voice>
 </phrase>

@@ -2480,62 +2480,6 @@
   </voice>
 </phrase>
 <phrase>
-  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
-  desc: automatically switch between day and night backlight brightness
-  user: core
-  <source>
-    *: "Automatic Day/Night Brightness"
-  </source>
-  <dest>
-    *: "Automatic Day/Night Brightness"
-  </dest>
-  <voice>
-    *: "Automatic Day/Night Brightness"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_NIGHT_BRIGHTNESS
-  desc: night backlight brightness setting
-  user: core
-  <source>
-    *: "Night Backlight Brightness"
-  </source>
-  <dest>
-    *: "Night Backlight Brightness"
-  </dest>
-  <voice>
-    *: "Night Backlight Brightness"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_NIGHT_MODE_START
-  desc: time when night backlight brightness starts
-  user: core
-  <source>
-    *: "Night Mode Starts"
-  </source>
-  <dest>
-    *: "Night Mode Starts"
-  </dest>
-  <voice>
-    *: "Night Mode Starts"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_NIGHT_MODE_END
-  desc: time when night backlight brightness ends
-  user: core
-  <source>
-    *: "Night Mode Ends"
-  </source>
-  <dest>
-    *: "Night Mode Ends"
-  </dest>
-  <voice>
-    *: "Night Mode Ends"
-  </voice>
-</phrase>
-<phrase>
   id: LANG_CONTRAST
   desc: in settings_menu
   user: core
@@ -17285,5 +17229,61 @@
   <voice>
     *: none
     touchscreen: "Touchscreen Flick Shortcuts"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Automatic Day/Night Brightness"
+  </dest>
+  <voice>
+    *: "Automatic Day/Night Brightness"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Night Backlight Brightness"
+  </dest>
+  <voice>
+    *: "Night Backlight Brightness"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Night Mode Starts"
+  </dest>
+  <voice>
+    *: "Night Mode Starts"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Night Mode Ends"
+  </dest>
+  <voice>
+    *: "Night Mode Ends"
   </voice>
 </phrase>

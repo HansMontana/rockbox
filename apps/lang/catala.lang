@@ -2532,15 +2532,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Brillantor de la retroil·luminació"
+    backlight_brightness: "Brillantor diürna de la retroil·luminació"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Brillantor de la retroil·luminació"
+    backlight_brightness: "Brillantor diürna de la retroil·luminació"
   </voice>
 </phrase>
 <phrase>
@@ -12764,5 +12764,61 @@
   </dest>
   <voice>
     *: "Color del separador de línies"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Brillantor diürna/nocturna automàtica"
+  </dest>
+  <voice>
+    *: "Brillantor diürna/nocturna automàtica"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Brillantor nocturna de la retroil·luminació"
+  </dest>
+  <voice>
+    *: "Brillantor nocturna de la retroil·luminació"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Inici del mode nocturn"
+  </dest>
+  <voice>
+    *: "Inici del mode nocturn"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Fi del mode nocturn"
+  </dest>
+  <voice>
+    *: "Fi del mode nocturn"
   </voice>
 </phrase>

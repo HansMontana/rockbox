@@ -2356,15 +2356,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "백라이트 밝기"
+    backlight_brightness: "주간 백라이트 밝기"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "백라이트 밝기"
+    backlight_brightness: "주간 백라이트 밝기"
   </voice>
 </phrase>
 <phrase>
@@ -17111,5 +17111,61 @@
   </dest>
   <voice>
     *: "컨텍스트 항목 설정"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "주간/야간 밝기 자동 전환"
+  </dest>
+  <voice>
+    *: "주간/야간 밝기 자동 전환"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "야간 백라이트 밝기"
+  </dest>
+  <voice>
+    *: "야간 백라이트 밝기"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "야간 모드 시작"
+  </dest>
+  <voice>
+    *: "야간 모드 시작"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "야간 모드 종료"
+  </dest>
+  <voice>
+    *: "야간 모드 종료"
   </voice>
 </phrase>

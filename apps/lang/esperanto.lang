@@ -2803,15 +2803,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Heleco de malantaŭa lumo"
+    backlight_brightness: "Taga heleco de malantaŭa lumo"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Heleco de malantaŭa lumo"
+    backlight_brightness: "Taga heleco de malantaŭa lumo"
   </voice>
 </phrase>
 <phrase>
@@ -7484,5 +7484,61 @@
   </dest>
   <voice>
     *: ""
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Aŭtomata taga/nokta heleco"
+  </dest>
+  <voice>
+    *: "Aŭtomata taga/nokta heleco"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Nokta heleco de malantaŭa lumo"
+  </dest>
+  <voice>
+    *: "Nokta heleco de malantaŭa lumo"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Komenco de nokta reĝimo"
+  </dest>
+  <voice>
+    *: "Komenco de nokta reĝimo"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Fino de nokta reĝimo"
+  </dest>
+  <voice>
+    *: "Fino de nokta reĝimo"
   </voice>
 </phrase>

@@ -5435,15 +5435,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Brillo de luz de fondo"
+    backlight_brightness: "Brillo diurno de luz de fondo"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Brillo de luz de fondo"
+    backlight_brightness: "Brillo diurno de luz de fondo"
   </voice>
 </phrase>
 <phrase>
@@ -16993,5 +16993,61 @@
   </dest>
   <voice>
     *: "~U S B"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Brillo automático de día/noche"
+  </dest>
+  <voice>
+    *: "Brillo automático de día/noche"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Brillo nocturno de luz de fondo"
+  </dest>
+  <voice>
+    *: "Brillo nocturno de luz de fondo"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Inicio del modo nocturno"
+  </dest>
+  <voice>
+    *: "Inicio del modo nocturno"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Fin del modo nocturno"
+  </dest>
+  <voice>
+    *: "Fin del modo nocturno"
   </voice>
 </phrase>

@@ -2344,15 +2344,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Яркост на подсветката"
+    backlight_brightness: "Дневна яркост на подсветката"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Яркост на подсветката"
+    backlight_brightness: "Дневна яркост на подсветката"
   </voice>
 </phrase>
 <phrase>
@@ -17161,5 +17161,61 @@
   <voice>
     *: none
     touchscreen: "Преки пътища на тъчскрийн"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Автоматична дневна/нощна яркост"
+  </dest>
+  <voice>
+    *: "Автоматична дневна/нощна яркост"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Нощна яркост на подсветката"
+  </dest>
+  <voice>
+    *: "Нощна яркост на подсветката"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Начало на нощния режим"
+  </dest>
+  <voice>
+    *: "Начало на нощния режим"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Край на нощния режим"
+  </dest>
+  <voice>
+    *: "Край на нощния режим"
   </voice>
 </phrase>

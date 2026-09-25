@@ -2532,15 +2532,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Atzeko argiaren distira"
+    backlight_brightness: "Eguneko atzeko argiaren distira"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Atzeko argiaren distira"
+    backlight_brightness: "Eguneko atzeko argiaren distira"
   </voice>
 </phrase>
 <phrase>
@@ -12632,5 +12632,61 @@
   </dest>
   <voice>
     *: "Aukeratu eskaneatzeko direktorioak"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Eguneko/gaueko distira automatikoa"
+  </dest>
+  <voice>
+    *: "Eguneko/gaueko distira automatikoa"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Gaueko atzeko argiaren distira"
+  </dest>
+  <voice>
+    *: "Gaueko atzeko argiaren distira"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Gaueko modua hasten da"
+  </dest>
+  <voice>
+    *: "Gaueko modua hasten da"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Gaueko modua amaitzen da"
+  </dest>
+  <voice>
+    *: "Gaueko modua amaitzen da"
   </voice>
 </phrase>

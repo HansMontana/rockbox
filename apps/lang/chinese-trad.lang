@@ -2559,15 +2559,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "背光亮度"
+    backlight_brightness: "日間背光亮度"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "背光亮度"
+    backlight_brightness: "日間背光亮度"
   </voice>
 </phrase>
 <phrase>
@@ -11236,5 +11236,61 @@
   <voice>
     *: none
     ibassodx50,ibassodx90: "CPU頻率管理器"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "自動日間/夜間亮度"
+  </dest>
+  <voice>
+    *: "自動日間/夜間亮度"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "夜間背光亮度"
+  </dest>
+  <voice>
+    *: "夜間背光亮度"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "夜間模式開始"
+  </dest>
+  <voice>
+    *: "夜間模式開始"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "夜間模式結束"
+  </dest>
+  <voice>
+    *: "夜間模式結束"
   </voice>
 </phrase>

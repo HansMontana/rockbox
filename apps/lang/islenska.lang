@@ -2028,15 +2028,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Birtustig baklýsingar"
+    backlight_brightness: "Birtustig baklýsingar að degi"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Birtustig baklýsingar"
+    backlight_brightness: "Birtustig baklýsingar að degi"
   </voice>
 </phrase>
 <phrase>
@@ -6344,5 +6344,61 @@
   <voice>
     *: none
     radio: ""
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Sjálfvirkt birtustig dags/nætur"
+  </dest>
+  <voice>
+    *: "Sjálfvirkt birtustig dags/nætur"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Birtustig baklýsingar að nóttu"
+  </dest>
+  <voice>
+    *: "Birtustig baklýsingar að nóttu"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Næturstilling hefst"
+  </dest>
+  <voice>
+    *: "Næturstilling hefst"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Næturstilling lýkur"
+  </dest>
+  <voice>
+    *: "Næturstilling lýkur"
   </voice>
 </phrase>

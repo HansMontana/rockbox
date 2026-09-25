@@ -2530,15 +2530,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Svjetlina pozadinskog osvjetljenja"
+    backlight_brightness: "Dnevna svjetlina pozadinskog osvjetljenja"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Svjetlina pozadinskog osvjetljenja"
+    backlight_brightness: "Dnevna svjetlina pozadinskog osvjetljenja"
   </voice>
 </phrase>
 <phrase>
@@ -12482,5 +12482,61 @@
   </dest>
   <voice>
     *: "Pokreni tajmer spavanja pri paljenju "
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Automatska dnevna/noćna svjetlina"
+  </dest>
+  <voice>
+    *: "Automatska dnevna/noćna svjetlina"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Noćna svjetlina pozadinskog osvjetljenja"
+  </dest>
+  <voice>
+    *: "Noćna svjetlina pozadinskog osvjetljenja"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Početak noćnog načina"
+  </dest>
+  <voice>
+    *: "Početak noćnog načina"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Kraj noćnog načina"
+  </dest>
+  <voice>
+    *: "Kraj noćnog načina"
   </voice>
 </phrase>

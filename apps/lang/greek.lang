@@ -2503,15 +2503,15 @@
   user: core
   <source>
     *: none
-    backlight_brightness: "Backlight Brightness"
+    backlight_brightness: "Day Backlight Brightness"
   </source>
   <dest>
     *: none
-    backlight_brightness: "Φωτεινότητα οθόνης"
+    backlight_brightness: "Φωτεινότητα οθόνης ημέρας"
   </dest>
   <voice>
     *: none
-    backlight_brightness: "Φωτεινότητα οθόνης"
+    backlight_brightness: "Φωτεινότητα οθόνης ημέρας"
   </voice>
 </phrase>
 <phrase>
@@ -15575,5 +15575,61 @@
   </dest>
   <voice>
     *: "Ελληνικά"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AUTOMATIC_BACKLIGHT_BRIGHTNESS
+  desc: automatically switch between day and night backlight brightness
+  user: core
+  <source>
+    *: "Automatic Day/Night Brightness"
+  </source>
+  <dest>
+    *: "Αυτόματη φωτεινότητα ημέρας/νύχτας"
+  </dest>
+  <voice>
+    *: "Αυτόματη φωτεινότητα ημέρας/νύχτας"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_BRIGHTNESS
+  desc: night backlight brightness setting
+  user: core
+  <source>
+    *: "Night Backlight Brightness"
+  </source>
+  <dest>
+    *: "Φωτεινότητα οθόνης νύχτας"
+  </dest>
+  <voice>
+    *: "Φωτεινότητα οθόνης νύχτας"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_START
+  desc: time when night backlight brightness starts
+  user: core
+  <source>
+    *: "Night Mode Starts"
+  </source>
+  <dest>
+    *: "Έναρξη νυχτερινής λειτουργίας"
+  </dest>
+  <voice>
+    *: "Έναρξη νυχτερινής λειτουργίας"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_NIGHT_MODE_END
+  desc: time when night backlight brightness ends
+  user: core
+  <source>
+    *: "Night Mode Ends"
+  </source>
+  <dest>
+    *: "Λήξη νυχτερινής λειτουργίας"
+  </dest>
+  <voice>
+    *: "Λήξη νυχτερινής λειτουργίας"
   </voice>
 </phrase>
